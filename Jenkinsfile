@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
-                sh 'g++ -c main/PES1UG20CS645.py'
+                sh 'g++ -c main/PES1UG20CS645.cpp'
                 sh 'g++ -o PES1UG20CS645 main/PES1UG20CS645.cpp'            }
         }
 
