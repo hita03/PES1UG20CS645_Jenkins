@@ -13,7 +13,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh '../PES1UG20CS645'
                 echo 'Test Stage Successful'
             }
@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 
-                
+                sh "chmod +x -R ${env.WORKSPACE}"
                 echo 'Deployment Successful'
             }
         }
